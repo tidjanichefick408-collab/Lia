@@ -1,0 +1,148 @@
+<!doctype html>
+
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>LumiNa Bijoux — Boutique</title>
+  <style>
+    :root{--accent:#b8860b;--bg:#fff;--muted:#666}
+    *{box-sizing:border-box}
+    body{font-family:Inter,system-ui,Arial,Helvetica,sans-serif;margin:0;background:linear-gradient(180deg,#fff,#f7f7f9);color:#111}
+    header{background:#fff;box-shadow:0 2px 6px rgba(0,0,0,0.06);padding:18px 20px;display:flex;align-items:center;justify-content:space-between}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:48px;height:48px;border-radius:8px;background:linear-gradient(135deg,#ffd87a,#ffd3b6);display:flex;align-items:center;justify-content:center;font-weight:700;color:#3a2b00}
+    h1{font-size:18px;margin:0}
+    nav a{margin-left:14px;text-decoration:none;color:var(--muted);font-size:14px}
+    .hero{padding:28px 20px;display:flex;gap:20px;align-items:center}
+    .hero .intro{flex:1}
+    .hero h2{margin:0 0 8px 0;font-size:26px}
+    .hero p{margin:0 0 12px 0;color:var(--muted)}
+    .cta{display:flex;gap:10px}
+    .btn{padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:600}
+    .btn-primary{background:var(--accent);color:#fff}
+    .btn-ghost{background:transparent;border:1px solid #eee;color:var(--muted)}
+    .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;padding:12px 20px}
+    .card{background:#fff;border-radius:12px;box-shadow:0 6px 18px rgba(26,26,30,0.06);overflow:hidden}
+    .card img{width:100%;height:200px;object-fit:cover;display:block}
+    .card .info{padding:12px}
+    .price{color:var(--accent);font-weight:700}
+    .actions{display:flex;gap:8px;margin-top:10px}
+    footer{padding:18px 20px;color:var(--muted);font-size:14px;display:flex;justify-content:space-between;align-items:center}
+    .social a{text-decoration:none;margin-left:10px}
+    /* Responsive */
+    @media(min-width:900px){.hero{padding:48px 80px}.gallery{padding:24px 80px}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <div class="logo">LB</div>
+      <div>
+        <h1>LumiNa Bijoux</h1>
+        <div style="font-size:12px;color:var(--muted)">Bijoux faits main — Livraison Gabon</div>
+      </div>
+    </div>
+    <nav>
+      <a href="#products">Nos produits</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>  <section class="hero">
+    <div class="intro">
+      <h2>Des bijoux élégants — prix accessibles</h2>
+      <p>Bagues, colliers, bracelets, boucles d'oreilles et ensembles. Commande facilement via WhatsApp.</p>
+      <div class="cta">
+        <!-- WhatsApp link with prefilled message (numéro fourni) -->
+        <a class="btn btn-primary" id="whatsappBtn" href="https://wa.me/24174206512?text=Bonjour%20LumiNa%20Bijoux%2C%20je%20veux%20commander%20:%20" target="_blank">Commander sur WhatsApp</a>
+        <a class="btn btn-ghost" href="#products">Voir les produits</a>
+      </div>
+    </div>
+    <div style="width:320px;max-width:40%">
+      <img src="https://images.unsplash.com/photo-1520975911113-3e4468b9f4a5?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Bijoux" style="width:100%;border-radius:12px;box-shadow:0 8px 30px rgba(0,0,0,0.08)">
+    </div>
+  </section>  <main>
+    <h3 id="products" style="padding:8px 20px 0 20px;margin:12px 0;color:var(--muted)">Nos nouveautés</h3>
+    <section class="gallery" aria-label="Catalogue">
+      <!-- Product card 1 -->
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Bague or">
+        <div class="info">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div>
+              <div style="font-weight:700">Bague "Auréole"</div>
+              <div style="font-size:13px;color:var(--muted)">Acier inoxydable - finition dorée</div>
+            </div>
+            <div class="price">15 000 XAF</div>
+          </div>
+          <div class="actions">
+            <a class="btn btn-ghost" href="#" onclick="showDetails('Bague \"Auréole\"',15000)">Détails</a>
+            <a class="btn btn-primary" href="https://wa.me/24174206512?text=Bonjour%20je%20veux%20commander%20la%20Bague%20Auréole" target="_blank">Commander</a>
+          </div>
+        </div>
+      </article><!-- Product card 2 -->
+  <article class="card">
+    <img src="https://images.unsplash.com/photo-1520975911113-3e4468b9f4a5?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Collier">
+    <div class="info">
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <div>
+          <div style="font-weight:700">Collier "Éclat"</div>
+          <div style="font-size:13px;color:var(--muted)">Perles et pendentif élégant</div>
+        </div>
+        <div class="price">25 000 XAF</div>
+      </div>
+      <div class="actions">
+        <a class="btn btn-ghost" href="#" onclick="showDetails('Collier \"Éclat\"',25000)">Détails</a>
+        <a class="btn btn-primary" href="https://wa.me/24174206512?text=Bonjour%20je%20veux%20commander%20le%20Collier%20Éclat" target="_blank">Commander</a>
+      </div>
+    </div>
+  </article>
+
+  <!-- Product card 3 -->
+  <article class="card">
+    <img src="https://images.unsplash.com/photo-1539883372801-8f0e6f6f6c3d?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Bracelet">
+    <div class="info">
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <div>
+          <div style="font-weight:700">Bracelet "Rivage"</div>
+          <div style="font-size:13px;color:var(--muted)">Cuir tressé et perles</div>
+        </div>
+        <div class="price">10 000 XAF</div>
+      </div>
+      <div class="actions">
+        <a class="btn btn-ghost" href="#" onclick="showDetails('Bracelet \"Rivage\"',10000)">Détails</a>
+        <a class="btn btn-primary" href="https://wa.me/24174206512?text=Bonjour%20je%20veux%20commander%20le%20Bracelet%20Rivage" target="_blank">Commander</a>
+      </div>
+    </div>
+  </article>
+
+  <!-- Add more cards as needed -->
+</section>
+
+<section id="contact" style="padding:20px">
+  <h3>Contact & Suivi</h3>
+  <p style="color:var(--muted)">Clique sur le bouton WhatsApp pour envoyer une commande ou poser une question rapidement.</p>
+  <div style="display:flex;gap:12px;margin-top:8px;align-items:center">
+    <a class="btn btn-primary" href="https://wa.me/24174206512?text=Bonjour%20LumiNa%20Bijoux%2C%20j%27ai%20une%20question" target="_blank">Message WhatsApp</a>
+    <!-- Social links placeholders - change 'tonprofil' par ton identifiant -->
+    <div class="social">Suivez-nous:
+      <a href="https://www.facebook.com/tonprofil" target="_blank">Facebook</a>
+      <a href="https://www.instagram.com/tonprofil" target="_blank">Instagram</a>
+    </div>
+  </div>
+</section>
+
+  </main>  <footer>
+    <div>© <span id="year"></span> LumiNa Bijoux</div>
+    <div style="font-size:13px;color:var(--muted)">Livraison dans tout Libreville • Paiement: Cash / Airtel Money</div>
+  </footer>  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    function showDetails(name,price){
+      const msg = `Produit: ${name}\nPrix: ${price} XAF\n\nSouhaitez-vous commander ?`;
+      if(confirm(msg)){
+        // ouvre WhatsApp avec message pré-rempli
+        const text = encodeURIComponent(`Bonjour%20je%20veux%20commander%20${name}`);
+        window.open(`https://wa.me/24174206512?text=${text}`, '_blank');
+      }
+    }
+  </script></body>
+</html>
